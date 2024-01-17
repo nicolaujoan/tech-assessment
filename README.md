@@ -10,7 +10,7 @@ usar los datos del JSON como base de datos, este JSON esta situado en la raíz d
 Proporcionamos en este repositorio un boilerplate con un stack similar al utilizado en Ucademy, NestJS para el backend y React para
 el frontend.
 
-`git clone git@github.com:Ucademy/tech-assessment.git`
+`git clone git@github.com:UcademyTech/tech-assessment.git`
 
 `npm install`
 
@@ -22,8 +22,10 @@ el frontend.
 
 [Interfaz de usuario](https://www.figma.com/file/r1zwsMJU7IAsBJVuFLZHPK/Technical-Assessment?type=design&node-id=0%3A1&mode=design&t=tubwoMUyG8Lc4z9F-1)
 
-- No se proporciona una versión para dispositivos móviles pero si se implementa será valorada positivamente.
 - El uso de Styled components será valorado positivamente.
 
-
 PD: El objetivo de la prueba es simplemente valorar las desiciones que toma el candidato a la hora de realizar la implementación. Hay muchas soluciones válidas a lo que aquí se plantea.
+
+## Entrega:
+
+Una vez finalizada la prueba se deberá entregar en un archivo comprimido (zip, tar.gz, etc) con el nombre del candidato.
