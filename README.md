@@ -29,3 +29,28 @@ PD: El objetivo de la prueba es simplemente valorar las desiciones que toma el c
 ## Entrega:
 
 Una vez finalizada la prueba se deberá entregar en un archivo comprimido (zip, tar.gz, etc) con el nombre del candidato.
+
+## Solución
+
+### Frontend
+
+1) Haciendo la prueba renderizando 5000 elementos de la lista, es casi instantáneo, pero a medida que se aumenta el número de usuarios a renderizar, el "lag" va aumentando. Como Ucademy está en pleno crecimiento, esa cifra va a aumentar.
+
+Se ha hecho una prueba con 50000 usuarios y la página tarda casi 4 segundos, por tanto hay que optimizar a nivel de cliente.
+
+Tras investigar, he descubierto la técnica de renderización virtualizada, que consiste básicamente en renderizar los elementos visibles en el viewport, aquí una explicación mas detallada:
+
+https://www.patterns.dev/vanilla/virtual-lists#:~:text=Rather%20than%20rendering%201000s%20of%20elements%20from%20a,list%20rendering%20fast%20on%20mid%20to%20low-end%20devices.
+
+como en Ucademy se prioriza la entrega de valor a la absoluta perfección, decido que usaré una librería externa donde delegar la virtualización de la lista. Tras investigar alguna de populares como son react-virtualized, react-window y virtuoso, opto por usar esta última ya que tiene la comunidad mas activa y me mola mas la dev experience.
+
+2) Ya no tenemos problemas de performance en el cliente, pero no es muy usual cargar 5000 usuarios del tirón, para ello se va implementar la paginación de la lista de usuarios y que nuestra api se encargue de servirlos, además de usar un loader de mientras se están cargando los datos.
+
+3) Se va a usar styledComponents para dejar fina la UI
+
+### Backend
+
+1) El principal problema de performance es que hay que cargar en memoria muchos elementos, leyendo de un archivo muy grande, vamos a ver lo que nos ofrece node js para poder mitigar impactos negativos sobre nuestra RAM.
+
+
+
