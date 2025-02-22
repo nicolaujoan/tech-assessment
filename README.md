@@ -44,7 +44,7 @@ https://www.patterns.dev/vanilla/virtual-lists#:~:text=Rather%20than%20rendering
 
 como en Ucademy se prioriza la entrega de valor a la absoluta perfección, decido que usaré una librería externa donde delegar la virtualización de la lista. Tras investigar alguna de populares como son react-virtualized, react-window y virtuoso, opto por usar esta última ya que tiene la comunidad mas activa y me mola mas la dev experience.
 
-2) Ya no tenemos problemas de performance en el cliente, pero no es muy usual cargar 5000 usuarios del tirón, para ello se va implementar la paginación de la lista de usuarios y que nuestra api se encargue de servirlos, además de usar un loader de mientras se están cargando los datos.
+2) Ya no tenemos problemas de performance en el cliente (react ha sido capaz de renderizar con 4s aprox 1242756 items en una lista), pero no es muy usual cargar 5000 usuarios del tirón, para ello se va implementar la paginación de la lista de usuarios y que nuestra api se encargue de servirlos, además de usar un loader de mientras se están cargando los datos, manteniendo la virtualización de la lista para una mejor experiencia de usuario
 
 3) Se va a usar styledComponents para dejar fina la UI
 
