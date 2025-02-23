@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Users from './users';
+import UsersTable from './usersTable';
 
 const StyledApp = styled.div`
   // Your style here
@@ -9,7 +9,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <Users />
+      <UsersTable />
     </StyledApp>
   );
 }
